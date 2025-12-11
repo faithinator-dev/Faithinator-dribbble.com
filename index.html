@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faithinator: Dribbble project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+         @media (min-width:1024px){
+            .hired-talent{
+                width: 700px !important;
+                min-width: 700px;
+            }
+        }
+        @media (max-width:1024px){
+            .hired-talent{
+                width: 700px !important;
+                min-width: 700px;
+            }
+        }
+
+        @media (max-width:769px){
+            /* .nav-item.dropdown a:hover .dropdown-menu {
+            display: block;
+            height: 0.0px;
+            padding: 0;
+            } */
+
+            .hired-talent{
+                width: auto !important;
+                min-width: 95vw;
+                box-shadow: 0 0 0 !important;
+                border: none !important;
+                background-color: transparent !important;
+                display: block !important;
+                
+            }
+
+            .get-hired{
+                width: auto !important;
+                min-width: 95vw;
+                box-shadow: 0 0 0 !important;
+                border: none !important;
+                background-color: transparent !important;
+                display: block !important;
+            }
+
+            .community{
+                width: auto !important;
+                min-width: 95vw;
+                box-shadow: 0 0 0 !important;
+                border: none !important;
+                background-color: transparent !important;
+                display: block !important;
+            }
+
+
+        }
+            
+
+    </style>
+</head>
+<body>
+    <!-- my navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid mx-lg-5">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
+            <div style="background-color: black; border: 1px solid black; width:100%; height: 10%;"></div>
+            <div style="background-color: black; border: 1px solid black; width:80%; height: 10%;"></div>
+            <div style="background-color: black; border: 1px solid black; width:50%; height: 10%;"></div>
+            </button>
+
+            <a class="navbar-brand disabled ps-3 me-auto" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/scale-up.svg" alt="" loading="lazy" class="me-2">Popular</a></li>
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/design-geminilogo.svg" alt="" loading="lazy" class="me-2">New and Noteworthy</a></li>
+                        <!-- hr -->
+                        <li><hr class="dropdown-divider mx-auto " width="90%"></li>
+                        <!-- second part -->
+                        <li class="py-2"><a class="dropdown-item" href="#">Product Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Web Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Animation</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Branding</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Illustration</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Mobile</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Typography</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hire Talent
+                    </a>
+                    <div class="hired-talent dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="max-width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                        <div class="row g-4">
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/gemini-menubook.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Start a Project Brief</h6>
+                                    <p class="small text-muted mb-0">Get instant talent recommendations</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/tag.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Explore Services</h6>
+                                    <p class="small text-muted mb-0">Hire quickly with pre-packaged services</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                            <div class="me-3 fs-3"><img src="images/search-icon.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Browse Profiles</h6>
+                                    <p class="small text-muted mb-0">Find and message talent directly</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/pin.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Post a Full-Time Job</h6>
+                                    <p class="small text-muted mb-0">Reach designers looking for roles</p>
+                                </div>
+                            
+
+                        </div>
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Get Hired
+                </a>
+                <div class="get-hired dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/menubook.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Project Brief</h6>
+                                <p class="small text-muted mb-0">Browse open client project briefs</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                            <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
+                        </div>
+                        <!-- second line -->
+                         <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/save-plus.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Add a Service</h6>
+                                <p class="small text-muted mb-0">Let clients purchase your services</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/bag.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Full-Time Jobs</h6>
+                                <p class="small text-muted mb-0">
+                                Apply to full-time design roles
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                    
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Community
+                </a>
+                
+                <div class="community dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 400px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Blog</h6>
+                                <p class="small text-muted mb-0">Design inspiration, stories, and tips</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn text-start">
+                            <div class="me-3 fs-3"><img src="images/cup-achieve.svg" alt="" sizes="20px"></div>
+                            <a href="#" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Playoffs</h6>
+                                <p class="small text-muted mb-0">Join creative challenges and show your skills</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Help Center</h6>
+                                <p class="small text-muted mb-0">Get quick answers and learn how to use Dribbble</p>
+                            </a>
+                        </div>
+
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                   <span>Follow Us </span><img src="images/instagram.svg" width="20px" class="mx-2 cursol"> <img src="images/x-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/pinterest.svg" width="20px" class="mx-2 cursol"> <img src="images/youtube-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/tiktok.svg" alt="" width="20px" class="mx-2 cursol"> <img src="images/trend-icon.svg" alt="" width="20px" class="mx-2 cursol">
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                </li>
+            </ul>
+
+
+            <div class="d-flex ms-auto align-items-center gap-3 mt-3 mt-lg-0">
+                <a href="#" class="btn-signup px-3 py-2 text-decoration-none d-none d-md-block rounded-pill">Sign&nbsp;up</a>
+                <a href="#" class="btn-login text-light px-3 py-2 text-decoration-none rounded-pill">Log&nbsp;in</a>
+             </div>
+            </div>
+            
+            
+            
+        </div>
+        </nav>
+
+        <section class="hero-section container-fluid mb-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-left">
+                    <h1 class="hero-title text-center text-lg-start">Discover the World's Top Designers</h1>
+                    <p class="hero-subtitle text-center text-lg-start">Explore work from the most talented and accomplished designers ready to take on your next project.</p>
+
+                    <input type="radio" name="tab" id="shots" checked>
+                    <input type="radio" name="tab" id="designers">
+                    <input type="radio" name="tab" id="services">
+
+                    <div class="tabs d-flex justify-content-center justify-content-lg-start gap-2 mb-3">
+                        <label for="shots" class="rounded-pill d-flex gap-2">
+                            <img src="images/image-default.svg" alt="" width="16px" class="my-auto mx-1 ">
+                            Shots
+                        </label>
+
+                        <label for="designers" class="rounded-pill d-flex gap-2">
+                            <img src="images/people-2people.svg" alt="" width="16px" class="my-auto mx-1">
+                            Designers
+                        </label>
+
+                        <label for="services" class="rounded-pill d-flex gap-2">
+                            <img src="images/menubook-love.svg" alt="" width="16px" class="my-auto mx-1">
+                            Services
+                        </label>
+                    </div>
+
+                    <div class="search-box w-100 mb-4">
+                        <input type="text" id="mainInput">
+                        <span class="fake-placeholder"></span>
+                        <button class="search-btn p-2 rounded-circle">
+                            <img src="images/search-icon.svg" alt="">
+                        </button>
+                    </div>
+                    
+                    <div class="subtexts w-100" style="overflow: hidden; ">
+                        <div class="sub shots-sub"><b class="fw-bold text-black">Popular: </b> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;">Dashboard </span> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> landing&nbsp;page </span> 
+                            <span class="d-flex px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> E&minus;commerce </span> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> Logo </span>
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> card </span>
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> icons </span>
+                        </div>
+                        <div class="sub designers-sub"><b class="fw-bold text-black">Popular: </b>
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style=" font-size: small; font-weight: 300; margin-right: 5px;"> app&nbsp;design </span>
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style=" font-size: small; font-weight: 300; margin-right: 5px;">landing&nbsp;page</span> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style=" font-size: small; font-weight: 300; margin-right: 5px;"> Web&nbsp;design </span> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style=" font-size: small; font-weight: 300; margin-right: 5px;">Dashboard </span>
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style=" font-size: small; font-weight: 300; margin-right: 5px;"> Logo&nbsp;Design </span>    
+                        </div>
+                        <div class="sub services-sub"><b class="fw-bold text-black">Popular: </b> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;">Branding </span> 
+                            <span class="px-1 px-lg2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> Web&nbsp;Design </span> 
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> Logo </span>  
+                            <span class="px-1 px-lg-2 py-1 bg-light-subtle rounded-pill text-dark border border-black-subtle" style="margin-right: 10px; font-size: small; font-weight: 300;"> UI/UX </span> 
+                        </div>
+                    </div>
+                    
+
+                    
+                </div>
+
+                <div class="col-lg-5 d-none d-lg-block">
+                    <div class="carousel slide" data-bs-ride="carousel">
+
+
+                        <!-- Carousel Items -->
+                        <div class="carousel-inner rounded-4">
+
+                            <!-- VIDEO 1 -->
+                            <div class="carousel-item active">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-video.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 1</div>
+                            </div>
+
+                            <!-- VIDEO 2 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos we-grow.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label"><img src="images/book.svg" width="20px" class="p-2 rounded-circle bg-blue" >We&nbsp;Grow</div>
+                            </div>
+ 
+                            <!-- VIDEO 3 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-video car.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 3</div>
+                            </div>
+
+                            <!-- VIDEO 4 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos rare -R & D.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 4</div>
+                            </div>
+
+                            <!-- VIDEO 5 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos nikita bauer.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 5</div>
+                            </div>
+
+                            <!-- VIDEO 6 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos kat manor-10.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 6</div>
+                            </div>
+
+                            <!-- VIDEO 7 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos ivan ermakov.mp4" type="video/mp4">
+                            </video>
+                             <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 7</div>
+                            </div>
+
+                            <!-- VIDEO 8 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos Digcy.mp4" type="video/mp4">
+                            </video>
+                             <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 8</div>
+                            </div>
+
+                            <!-- VIDEO 9 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos ceborska.mp4" type="video/mp4">
+                            </video>
+                             <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 9</div>
+                            </div>
+
+                            <!-- VIDEO 10 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-videos andrill pryvedenets.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 10</div>
+                            </div>
+
+                            <!-- VIDEO 11 -->
+                            <div class="carousel-item">
+                            <video class="d-block w-100" muted autoplay loop>
+                                <source src="videos/hero-video 9.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-controls">
+                                <img src="images/pause.svg" alt="pause" class="pause-icon">
+                            </div>
+                            <div class="video-label">Video 11</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="w-100">
+                <div class="p-3 shadow-sm bg-secondary-subtle rounded align-items-center d-lg-flex mt-5">
+                    <div>
+                        <button class="position-relative btn btn-light rounded-5 p-2 me-3">
+                            <span class="fw-bold me-2 text-dark"><img src="images/design-geminilogo.svg" alt="" sizes="20px"> Get Matched Now 
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pink">
+                                    New 
+                                    <span class="visually-hidden">unread messages</span> 
+                                    </span>
+                                </span>
+                        
+                        </button>
+                    </div>
+                    <span class="Text-muted small">Tell us what you need and instantly get matched with world-class talent ready to work on your project.→</span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="filter-nav py-3 bg-white border-bottom sticky-filter container-fluid">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex gap-3 align-items-center w-100">
+                    <div class="dropdown">
+                        <button class="btn text-dark text-decoration-none dropdown-toggle"  type="button" data-bs-toggle="dropdown">
+                            Popular
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-black bg-secondary-subtle" href="#">Popular</a></li>
+                            <li><a class="dropdown-item text-black bg-none" href="#">New & Noteworthy</a></li>
+                        </ul>
+                    </div>
+                    <div class=".nav-link-filter-group overflow-auto d-none d-lg-flex gap-3" style="min-width: 70%; max-width: 90%;">
+                    <a href="#" class="nav-link-filter active">Discover</a>
+                    <a href="#" class="nav-link-filter">Animation</a>
+                    <a href="#" class="nav-link-filter">Branding</a>
+                    <a href="#" class="nav-link-filter">Illustration</a>
+                    <a href="#" class="nav-link-filter">Mobile</a>
+                    <a href="#" class="nav-link-filter">Print</a>
+                    <a href="#" class="nav-link-filter">Product&nbsp;Design</a>
+                    <a href="#" class="nav-link-filter">Typography</a>
+                    <a href="#" class="nav-link-filter">Web&nbsp;Design</a>
+                    </div>
+                    <img src="images/right-angle.svg" alt="" width="16px" class="my-auto d-none d-lg-block">
+                </div>
+                <button class="btn btn-outline-secondary d-flex my-auto align-items-center">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    Filters
+                </button>
+            </div>
+            <div class="d-flex w-100 align-items-center justify-content-center">
+                <div class="nav-link-filter-group d-flex d-lg-none gap-3 position-relative" style="width: 100%; min-width: 90%;">
+                    <a href="#" class="nav-link-filter active">Discover</a>
+                    <a href="#" class="nav-link-filter">Animation</a>
+                    <a href="#" class="nav-link-filter">Branding</a>
+                    <a href="#" class="nav-link-filter">Illustration</a>
+                    <a href="#" class="nav-link-filter">Mobile</a>
+                    <a href="#" class="nav-link-filter">Print</a>
+                    <a href="#" class="nav-link-filter">Product&nbsp;Design</a>
+                    <a href="#" class="nav-link-filter">Typography</a>
+                    <a href="#" class="nav-link-filter">Web&nbsp;Design</a>
+                </div>
+                <img src="images/right-angle.svg" alt="" width="16px" class="my-auto d-lg-none position-absolute ps-2 py-1" style="left: 85%; backdrop-filter: blur(4px);">
+            </div>
+        </div>
+    </section>
+
+    <input type="radio" name="cancel" id="cancel" class="d-none">
+
+    <section class="promo-banner">
+        <div class="w-100 py-3 text-white position-relative">
+            <div class="container ">
+                <div class="d-lg-flex justify-content-center gap-3 align-items-center">
+                    <div><small>New clients get $100 off their first payment of $1,000+ to a designer on Dribbble with code HELLO100</small></div>
+                    <div href="#" class="btn btn-sm btn-white mt-2 mt-lg-0 rounded-pill">Terms Apply</div>
+                    <label for="cancel" class="btn btn-sm btn-link text-white text-decoration-none py-1 px-1 text-center position-absolute rounded-circle" style="top: 10px; width: 30px; height: 30px;  right: 5px; background-color: grey;">&times;</label >
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="design-grid py-5">
+        <div class="container">
+            <div class="row g-4 my-2">
+
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799314346d?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">
+                                Neumorphic Dashboard
+                             </span>
+                            <div class="overlay-actions">
+                                <button title="Save">
+                                    <img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;">
+                                </button>
+                                <button title="Like">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar">
+                        <span>Sarah UI</span>
+                        <span class="badge-pro">PRO</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 112</div>
+                        <div><i class="fas fa-eye"></i> 1.2k</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">Finance App Dark Mode</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar">
+                        <span>Mike Design</span>
+                        <span class="badge-team">TEAM</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 64</div>
+                        <div><i class="fas fa-eye"></i> 890</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">Abstract 3D Art</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Avatar">
+                        <span>Elena Art</span>
+                        <span class="badge-pro">PRO</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 320</div>
+                        <div><i class="fas fa-eye"></i> 4k</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">Educational Platform</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Avatar">
+                        <span>John UX</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 89</div>
+                        <div><i class="fas fa-eye"></i> 1.5k</div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1616469829941-c7200edec809?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">SaaS Landing Page</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Avatar">
+                        <span>Pixel Studio</span>
+                        <span class="badge-team">TEAM</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 204</div>
+                        <div><i class="fas fa-eye"></i> 2.8k</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">Retro Game UI</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Avatar">
+                        <span>Retro Gal</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 45</div>
+                        <div><i class="fas fa-eye"></i> 560</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1563206767-5b1d9786f60b?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">Crypto Wallet</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/88.jpg" alt="Avatar">
+                        <span>Crypto King</span>
+                        <span class="badge-pro">PRO</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 510</div>
+                        <div><i class="fas fa-eye"></i> 8k</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3 shot-card">
+                <div class="shot-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&auto=format&fit=crop&q=60" alt="Shot">
+                    <div class="shot-overlay">
+                        <div class="overlay-content">
+                            <span class="shot-title">Modern Agency Site</span>
+                            <div class="overlay-actions">
+                                <button><img class="save-card" src="images/save-pinterest.svg" style="width: 17px; height: 17px;"></i></button>
+                                <button><i class="fas fa-heart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shot-meta">
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Avatar">
+                        <span>Web Wiz</span>
+                    </div>
+                    <div class="shot-stats">
+                        <div><i class="fas fa-heart"></i> 130</div>
+                        <div><i class="fas fa-eye"></i> 1.9k</div>
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+            
+           <button class="more-btn btn mx-auto d-block btn-pink  my-2">Sign In For More</button>
+        </div>
+    </section>
+
+
+    <section class="marquee-images-animation w-100 my-5 py-5" style="overflow: visible;">
+        <div class="marquee-container  d-flex  w-100 h-auto" style="overflow-y: visible;">
+            <div class="marquee-track d-flex gap-5 ">
+                <div class="card bg-white position-relative" style="overflow-y: visible;">
+                   <img class="" src="images/slide animation-img/animation.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Animation</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/mobile.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Mobile</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/illustration.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Illustration</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/product-design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Product-design</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/slide animation-img/web-Design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Web design</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/typography.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Typography</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/branding.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Branding</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/paint.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Paint</h5>
+                   </div>
+                </div>
+            </div>
+
+            <div aria-hidden class="marquee-track d-flex gap-5 mx-5">
+                <div class="card  position-relative">
+                   <img class="" src="images/slide animation-img/animation.jpeg" alt="">
+                   <div class="card-body bg-white">
+                    <h5 class="card-title">Animation</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/mobile.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Mobile</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/illustration.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Illustration</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/product-design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Product-design</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/slide animation-img/web-Design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Web design</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/typography.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Typography</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/branding.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Branding</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/paint.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Paint</h5>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<footer>
+        <div class="container">
+            
+            <div class="row d-flex align-items-center justify-content-center text-center mb-4">
+                <div class="col-lg-2 col-md-12 mb-3 mb-lg-0">
+                    <a href="#" class="footer-logo ">Dribbble</a>
+                </div>
+                <div class="col-lg-7 col-md-12 mb-3 mb-lg-0">
+                    <ul class="footer-nav">
+                        <li><a href="#">For designers</a></li>
+                        <li><a href="#">Hire talent</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="social-icons text-lg-end">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 mb-3 mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <span>&COPY; 2025 Dribbble</span>
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy</a>
+                            <a href="#">Cookies</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="d-flex flex-wrap justify-content-lg-end">
+                            <a href="#">Jobs</a>
+                            <a href="#">Designers</a>
+                            <a href="#">Freelancers</a>
+                            <a href="#">Tags</a>
+                            <a href="#">Places</a>
+                            <a href="#">Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+

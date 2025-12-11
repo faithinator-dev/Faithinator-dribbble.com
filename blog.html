@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faithinator: Dribbble project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+      /* @media (min-width:1024px) {
+        h3{
+          font-size: 28px !important;
+        }
+
+        h5{
+          font-size: medium;
+        }
+      } */
+
+      @media (max-width:769px) {
+        h3{
+          font-size: 28px !important;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- my navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid mx-lg-5">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
+            <div style="background-color: black; border: 1px solid black; width:100%; height: 10%;"></div>
+            <div style="background-color: black; border: 1px solid black; width:80%; height: 10%;"></div>
+            <div style="background-color: black; border: 1px solid black; width:50%; height: 10%;"></div>
+            </button>
+
+            <a class="navbar-brand disabled ps-3 me-auto" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Explore
+                    </a>
+                    <ul class="dropdown-menu p-3">
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/scale-up.svg" alt="" loading="lazy" class="me-2">Popular</a></li>
+                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/design-geminilogo.svg" alt="" loading="lazy" class="me-2">New and Noteworthy</a></li>
+                        <!-- hr -->
+                        <li><hr class="dropdown-divider mx-auto " width="90%"></li>
+                        <!-- second part -->
+                        <li class="py-2"><a class="dropdown-item" href="#">Product Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Web Design</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Animation</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Branding</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Illustration</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Mobile</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Typography</a></li>
+                        <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Hire Talent
+                    </a>
+                    <div class="dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                        <div class="row g-4">
+                            <div class="col-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/gemini-menubook.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Start a Project Brief</h6>
+                                    <p class="small text-muted mb-0">Get instant talent recommendations</p>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/tag.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Explore Services</h6>
+                                    <p class="small text-muted mb-0">Hire quickly with pre-packaged services</p>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex">
+                            <div class="me-3 fs-3"><img src="images/search-icon.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Browse Profiles</h6>
+                                    <p class="small text-muted mb-0">Find and message talent directly</p>
+                                </div>
+                            </div>
+                            <div class="col-6 d-flex">
+                                <div class="me-3 fs-3"><img src="images/pin.svg" alt="" sizes="20px"></div>
+                                <div>
+                                    <h6 class="fw-semibold mb-1">Post a Full-Time Job</h6>
+                                    <p class="small text-muted mb-0">Reach designers looking for roles</p>
+                                </div>
+
+                        </div>
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Get Hired
+                </a>
+                <div class="dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 700px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/menubook.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Project Brief</h6>
+                                <p class="small text-muted mb-0">Browse open client project briefs</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                            <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
+                        </div>
+                        <!-- second line -->
+                         <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/save-plus.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Add a Service</h6>
+                                <p class="small text-muted mb-0">Let clients purchase your services</p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                        <!-- thrid line -->
+                        <div class="col-6 d-flex btn-div">
+                            <div class="me-3 fs-3"><img src="images/bag.svg" alt="" sizes="20px"></div>
+                            <div>
+                                <h6 class="fw-semibold mb-1">Full-Time Jobs</h6>
+                                <p class="small text-muted mb-0">
+                                Apply to full-time design roles
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6 d-flex">
+                        </div>
+
+                    
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                    <img src="images/book.svg" alt="" sizes="12px">
+                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                </div>
+                        </div>
+                </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Community
+                </a>
+                
+                <div class="dropdown-menu p-4 shadow-lg border-0 rounded-4 mt-2" style="width: 400px; border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Blog</h6>
+                                <p class="small text-muted mb-0">Design inspiration, stories, and tips</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn text-start">
+                            <div class="me-3 fs-3"><img src="images/cup-achieve.svg" alt="" sizes="20px"></div>
+                            <a href="#" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Playoffs</h6>
+                                <p class="small text-muted mb-0">Join creative challenges and show your skills</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        <div class="col-12 d-flex btn-div btn">
+                            <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
+                            <a href="blog.html" class="text-black text-start btn">
+                                <h6 class="fw-semibold mb-1">Help Center</h6>
+                                <p class="small text-muted mb-0">Get quick answers and learn how to use Dribbble</p>
+                            </a>
+                        </div>
+
+                        <hr class="my-3">
+
+                                <div class="small fw-semibold text-black"> 
+                                   <span>Follow Us </span><img src="images/instagram.svg" width="20px" class="mx-2 cursol"> <img src="images/x-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/pinterest.svg" width="20px" class="mx-2 cursol"> <img src="images/youtube-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/tiktok.svg" alt="" width="20px" class="mx-2 cursol"> <img src="images/trend-icon.svg" alt="" width="20px" class="mx-2 cursol">
+                                </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                </li>
+            </ul>
+
+
+            <div class="d-flex ms-auto align-items-center gap-3 mt-3 mt-lg-0">
+                <a href="signup.html" class="btn-signup px-3 py-2 text-decoration-none d-none d-md-block rounded-pill">Sign&nbsp;up</a>
+                <a href="signin.html" class="btn-login text-light px-3 py-2 text-decoration-none rounded-pill">Log&nbsp;in</a>
+             </div>
+            </div>
+            
+            
+            
+        </div>
+    </nav>
+
+    <main class=" container-fluid container-lg">
+      <div class="row mt-5 pt-5">
+        <h3 class="hero-title fw-bold py-5 ">
+            Courtside: <br>The Dribbble Blog
+          </h3 >
+        <div class="card col-7 col-md-8  col-md-8 mb-3" style=" border: none ;">
+          <small>Dec 8, 2025</small>
+          <h3 class="hero-title fw-semibold">5 Micro Interactions That Deliver Big Impact To Your WordPress Website</h3>
+          <img src="images/blog/blog hero.webp" alt="" class="w-100">
+          <p class="py-2">
+            Even the most intuitively designed website can still leave visitors unsure of what to do next or struggling to find what they’re looking for. That’s where Micro Interactions come in!
+          </p>
+          <hr width="100%">
+        </div>
+        <div class="card border-0  col-5 col-md-4 fw-semibold" style="line-height: 15px;">
+          <span> Overtime</span> <br>
+          <span class="text-secondary">The Dribbble Podcast</span> <br>
+          <span>The Power of Play</span> <br>
+          <hr width="50%">
+          <span class="fw-bold">All Categories</span> <br>
+          <span>Interviews</span> <br>
+         <span> Podcast</span> <br>
+         <span> Inspiration</span> <br>
+          <span>Process</span> <br>
+          <span>Meetups</span> <br>
+          <span>Updates</span> <br>
+          <span>Hang Time</span> <br>
+          <span>Community</span> <br>
+        </div>
+      
+
+      <div class="col-md-8 card mb-3" style="border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-1 how nixtio...webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Oct 2, 2025</p>
+                <h5 class="card-title text-hover-pink">How Nixtio Built a Global Design Studio with Flexibility, Feedback, and a Whole Lot of Dribbble</h5>
+                <p class="card-text ">With roots in Ukraine and a growing team in Miami and Valencia, Nixito has built a creative practice that spans UX/UI, 3D, branding, and mobile. In this feature, they share how they turned early rejections into creative fuel, how Dribbble’s marketplace supercharged their client pipeline, and why adaptability, not a signature style, is their secret weapon.</p>
+              </div>
+            </div>
+          </div>
+        <hr width="w-90" class="mx-auto">
+
+        </div>
+        <!-- blog 2 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-2 how heartbea......webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Sep 22, 2025</p>
+                <h5 class="card-title text-hover-pink">How Heartbeat Design Studio Rebuilt Hyros with Speed, Style, and Substance</h5>
+                <p class="card-text ">When Hyros needed a fast, full-scale rebrand, they turned to Heartbeat Design Studio and wound up finding a partner who could match their speed and vision. In just a month, the Ukraine-based team delivered a new site, visual identity, and animation system that reflected the platform’s enterprise credibility and creative edge. Here’s how a Dribbble DM turned into one of Heartbeat’s most meaningful collaborations to date.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>
+        <!-- blog 3 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-3 work-in-progrss.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Sep 9, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 13 🚧</h5>
+                <p class="card-text ">Results from our first year as a revenue-sharing marketplace, plus our latest product releases — including InstantMatch!</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>
+        <!-- blog 4 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-4 playin......webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Sep 2, 2025</p>
+                <h5 class="card-title text-hover-pink">Playing the Long Game, Letting the Sketches Fly, and Why Dribbble Matters</h5>
+                <p class="card-text ">From freelance to feature-worthy, Wells Collins has built a career on curiosity, consistency, and craft. Known for his expressive hand-lettered wordmarks and bold, organic logos, the Denver-based designer has turned Dribbble into a launchpad for his dream projects, and he’s done it all by showing the work he wants to be hired for. We talked about doodling, process, passion, and why throwing out your first five pages of sketches might be the best thing you ever do.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>
+        <!-- blog 5 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-5 work in progre....webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Jul 29, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 12 🚧</h5>
+                <p class="card-text ">Learn more about our latest product releases and their early impact on lead flow to designers.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>           
+      </div>
+      <!-- blog 6 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-6 working-in-pro......webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Jun 25, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 11 🚧</h5>
+                <p class="card-text ">Learn more about June’s product releases and their early impact on lead flow to designers.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>           
+      </div>
+      <!-- blog 7 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-7 celebra.......webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Jun 16, 2025</p>
+                <h5 class="card-title text-hover-pink">Celebrating Pride Month Through Design</h5>
+                <p class="card-text ">Dribbble is proud to celebrate the LGBTQIA+ community through design. We’ve curated a selection of impactful Pride-themed artwork from our talented designers, each sharing their connection to the work and the deeper meaning behind their creations.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>           
+      </div>
+      <!-- blog 8 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-8 unlock.... webflow exper...webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Jun 16, 2025</p>
+                <h5 class="card-title text-hover-pink">Unlock opportunities and showcase your skills with a Webflow Expert badge</h5>
+                <p class="card-text ">If you’re a designer who has mastered Webflow and wants to show off your skills, you can earn an Expert badge for your Dribbble profile and appear on our exclusive Webflow Expert landing page.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>           
+      </div>
+      <!-- blog 9 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-9 balkan bros.......webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">May 28, 2025</p>
+                <h5 class="card-title text-hover-pink">Balkan Bros: Building a Legacy of Trust from Progressive Insurance to AWS</h5>
+                <p class="card-text ">BB Agency’s success story is built on the power of long-term relationships and creative innovation. When a design project for Progressive Insurance led to a new product design for AWS, BB Agency’s seamless transition across industries and companies created a lasting impression of trust and consistency. Explore how they navigated these partnerships and how platforms like Dribbble played a crucial role in their growth and visibility.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>      
+        <!-- blog 10 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-10 how to make email.....webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">May 20, 2025</p>
+                <h5 class="card-title text-hover-pink">How to Make Emails That Survive the Delete Button</h5>
+                <p class="card-text ">What worked back in the day–or even a few years ago (cough, cough: emojis in email subject lines; random personalization that feels specific but isn’t), no longer captures attention. In fact, there are some common reasons why your emails might end up in the SPAM folder (or be left unread forever).</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div>
+        <!-- blog 11 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-11 merging.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">May 13, 2025</p>
+                <h5 class="card-title text-hover-pink">Merging Craftsmanship with Modern Design</h5>
+                <p class="card-text ">Greg Grigoriou’s design journey beautifully bridges the world of traditional craftsmanship and modern digital tools. Through Dribbble Projects, he’s been able to streamline his freelance business and connect with clients more efficiently, while staying true to his artistic roots. Dive into Greg’s creative story and see how he has carved out a unique identity in the design world.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+        <!-- blog 12 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-12 work-in-prog........webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">May 1, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 10 🚧</h5>
+                <p class="card-text ">Learn more about April’s product releases and the early results of our pivot from an advertising-supported community to a revenue-sharing marketplace.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+        <!-- blog 13 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-13 pushing-the boundaries-of-logo....webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Apr 8, 2025</p>
+                <h5 class="card-title text-hover-pink">Pushing the Boundaries of Logo Design Through Storytelling and Expression</h5>
+                <p class="card-text ">We talked to Brazilian graphic designer Breno Bitencourt, who is known for his bold, expressive logo designs that push traditional design boundaries.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+        <!-- blog 14 -->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-14 what-make-a-great-icon.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Mar 24, 2025</p>
+                <h5 class="card-title text-hover-pink">What Makes a Great Icon Set?</h5>
+                <p class="card-text ">Learn how to create a cohesive and unified icon set with these tips from Noun Project.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+        <!-- blog 15-->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-15 Work In Progress, Part 9 🚧.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Mar 17, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 9 🚧</h5>
+                <p class="card-text ">Dribbble’s mission is to help professional designers earn a living doing work they take pride in, and the Dribbble team is responsible for managing the business in a way that ensures it can continue fulfilling that mission in perpetuity. That’s why we’re pivoting from an advertising-supported community to a revenue-sharing marketplace.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+        <!-- blog 16-->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-16 Work In Progress, Part 8 🚧.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Mar 4, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 8 🚧</h5>
+                <p class="card-text ">Last week, Dribbble released Service Search to help clients find and compare relevant Services from thousands of designers.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+        <!-- blog 17-->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-17 Infusing Retro Boldness into Outdoor Design.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Mar 3, 2025</p>
+                <h5 class="card-title text-hover-pink">Infusing Retro Boldness into Outdoor Design</h5>
+                <p class="card-text ">We interviewed Danielle Podeszek, a Buffalo-based designer and founder of Pod Design Shop, who has spent over a decade honing her expertise in logo design, apparel, and merchandise for outdoor and athletic brands.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+         <!-- blog 18-->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-18 Frans Bergströ......webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Feb 10, 2025</p>
+                <h5 class="card-title text-hover-pink">Frans Bergström: Elevating Digital Products with Purposeful Illustration</h5>
+                <p class="card-text ">We interviewed Frans Bergström, a product designer who continues to resonate within the creative community. His unique approach—fuzing storytelling with design—and passion for illustration and motion design have established him as a sought-after designer.</p>
+              </div>
+            </div>
+          </div>
+          <hr width="90%" class="mx-auto">
+        </div> 
+         <!-- blog 19-->
+        <div class="col-md-8 card mb-3" style=" border: none ;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img  src="images/blog/blog-19 Work In Progress, Part 7 🚧.webp" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8 ">
+              <div class="card-body w-100">
+                <p class="card-text text-secondary">Feb 5, 2025</p>
+                <h5 class="card-title text-hover-pink">Work In Progress, Part 7 🚧</h5>
+                <p class="card-text ">We just released Milestones, a feature that enables designers to receive payouts incrementally as each phase of their project is completed (and even before work has begun if they negotiate an upfront payment with their client). This has been one of the most requested new features by both clients and designers.</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+
+      </div>
+
+      <div class="next mx-auto my-3 rounded-circle bg-secondary-subtle p-2" style="width: 40px; height: 40px;">
+        <img src="images/right-angle.svg" alt="" width="100%" style="filter: contrast(1) brightness(0) invert(1);" class="mx-auto my-auto">
+      </div>
+        
+    </main>
+
+    <section class="marquee-images-animation w-100 my-5 py-5" style="overflow: visible;">
+        <div class="marquee-container  d-flex  w-100 h-auto" style="overflow-y: visible;">
+            <div class="marquee-track d-flex gap-5 ">
+                <div class="card bg-white position-relative" style="overflow-y: visible;">
+                   <img class="" src="images/slide animation-img/animation.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Animation</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/mobile.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Mobile</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/illustration.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Illustration</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/product-design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Product-design</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/slide animation-img/web-Design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Web design</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/typography.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Typography</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/branding.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Branding</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/paint.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Paint</h5>
+                   </div>
+                </div>
+            </div>
+
+            <div aria-hidden class="marquee-track d-flex gap-5 mx-5">
+                <div class="card  position-relative">
+                   <img class="" src="images/slide animation-img/animation.jpeg" alt="">
+                   <div class="card-body bg-white">
+                    <h5 class="card-title">Animation</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/mobile.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Mobile</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                   <img src="images/slide animation-img/illustration.jpeg" alt="">
+                   <div class="card-body bg-white ">
+                    <h5 class="card-title">Illustration</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/product-design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Product-design</h5>
+                   </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/slide animation-img/web-Design.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Web design</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/typography.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Typography</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/branding.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Branding</h5>
+                   </div>
+                </div>
+                <div class="card">
+                    <img src="images/slide animation-img/paint.jpeg" alt="">
+                    <div class="card-body bg-white ">
+                    <h5 class="card-title">Paint</h5>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            
+            <div class="row d-flex align-items-center justify-content-center text-center mb-4">
+                <div class="col-lg-2 col-md-12 mb-3 mb-lg-0">
+                    <a href="#" class="footer-logo ">Dribbble</a>
+                </div>
+                <div class="col-lg-7 col-md-12 mb-3 mb-lg-0">
+                    <ul class="footer-nav">
+                        <li><a href="#">For designers</a></li>
+                        <li><a href="#">Hire talent</a></li>
+                        <li><a href="#">Inspiration</a></li>
+                        <li><a href="#">Advertising</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-12">
+                    <div class="social-icons text-lg-end">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12 mb-3 mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <span>&COPY; 2025 Dribbble</span>
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy</a>
+                            <a href="#">Cookies</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="d-flex flex-wrap justify-content-lg-end">
+                            <a href="#">Jobs</a>
+                            <a href="#">Designers</a>
+                            <a href="#">Freelancers</a>
+                            <a href="#">Tags</a>
+                            <a href="#">Places</a>
+                            <a href="#">Resources</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
