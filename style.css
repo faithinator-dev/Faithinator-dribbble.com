@@ -12,6 +12,30 @@ body{
     content: url('images/prime--angle-down.svg');
 }
 
+@media (min-width:1024px) {
+        /* h3{
+          font-size: 28px !important;
+        }
+
+        h5{
+          font-size: medium;
+        } */
+
+        .w-lg-700{
+          min-width: 700px !important;
+        }
+
+        .w-lg-400{
+          min-width: 400px !important;
+        }
+      }
+
+      @media (max-width:1024px) {
+        .dropdown-menu{
+          box-shadow:none !important;
+        }
+      }
+
 .cursol{
     cursor: pointer;
 }
@@ -23,6 +47,11 @@ body{
 
 .navbar .dropdown-menu {
     margin-top: 0;  
+}
+
+.btn-div{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .btn-div:hover{
