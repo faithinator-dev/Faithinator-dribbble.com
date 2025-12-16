@@ -8,7 +8,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="dribbble.css">
+    <style>
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+}
 
 .dropdown-toggle::after {
     display: inline-block;
@@ -261,58 +266,60 @@ input[name="tab"] {
     background-color: white;
 }
 
-.marquee-track {
-    animation: marquee 20s infinite linear;
+.marquee-track{
+    /* animation-name: marquee; */
+animation: marquee 20s infinite linear;
 }
 
 @keyframes marquee {
-    0% {
+    0%{
         translate: 0;
     }
-    100% {
+
+    100%{
         translate: -102.5%;
     }
 }
 
-.marquee-container:hover .marquee-track {
+.marquee-container:hover  .marquee-track{
     animation-play-state: paused;
 }
-
-.marquee-track .card {
+.marquee-track .card{
+    /* height: ; */
     width: 200px !important;
     justify-items: center;
+    /* flex:?; */
     flex-shrink: 0;
     flex-grow: 0;
     z-index: 10;
     background-color: white !important;
     overflow: visible;
 }
-
-.marquee-track .card img {
+.marquee-track .card img{
     width: 100%;
-    flex: 0 0 7;
+    flex: 0 0 7 ;
+    /* height: auto; */
 }
 
-.marquee-track .card-body h5 {
+.marquee-track .card-body h5{
     font-size: 14px !important;
     font-weight: bold !important;
 }
 
-.marquee-container {
-    overflow-x: hidden;
+.marquee-container{
+    overflow-x:hidden;
     overflow-y: visible !important;
 }
 
-.bg-white {
+.bg-white{
     background-color: white !important;
-    opacity: 1;
+    opacity: 1;  
 }
-
-.btn-bluedark {
+.btn-bluedark{
     background-color: #0D0C22;
 }
 
-.Ball {
+.Ball{
     background-color: #13A16A;
     filter: invert(1);
 }
@@ -539,6 +546,10 @@ footer {
 @media (max-width:1024px){
     .hired-talent{
         width: 700px !important;
+        min-width: 700px;
+    }
+}
+    </style>
 </head>
 <body>
     <!-- my navbar-->
@@ -746,17 +757,17 @@ footer {
                     <input type="radio" name="tab" id="services">
 
                     <div class="tabs d-flex justify-content-center justify-content-lg-start gap-2 mb-3">
-                        <label for="shots" id="label-shots" class="rounded-pill d-flex gap-2">
+                        <label for="shots" class="rounded-pill d-flex gap-2">
                             <img src="images/image-default.svg" alt="" width="16px" class="my-auto mx-1 ">
                             Shots
                         </label>
 
-                        <label for="designers" id="label-designers" class="rounded-pill d-flex gap-2">
+                        <label for="designers" class="rounded-pill d-flex gap-2">
                             <img src="images/people-2people.svg" alt="" width="16px" class="my-auto mx-1">
                             Designers
                         </label>
 
-                        <label for="services" id="label-services" class="rounded-pill d-flex gap-2">
+                        <label for="services" class="rounded-pill d-flex gap-2">
                             <img src="images/menubook-love.svg" alt="" width="16px" class="my-auto mx-1">
                             Services
                         </label>
