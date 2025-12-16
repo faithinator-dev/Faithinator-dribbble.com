@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faithinator: Dribbble.com project</title>
-    <link rel="shortcut icon" href="images/love.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/dribbleball-logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,6 +14,39 @@
         h3{
           font-size: 28px !important;
         }
+      }
+
+      /* Navbar search placeholder styling */
+      .navbar .fake-placeholder {
+        position: absolute;
+        top: 14px;
+        left: 30px;
+        color: #888;
+        transition: .3s;
+        font-size: 14px;
+      }
+
+      .navbar #mainInput:focus ~ .fake-placeholder {
+        display: none;
+      }
+
+      .navbar .fake-placeholder::after {
+        content: "What type of design are you interested in?";
+      }
+
+      #designers:checked ~ div .search-box .fake-placeholder::after {
+        content: "What type of designer do you need?";
+      }
+
+      #services:checked ~ div .search-box .fake-placeholder::after {
+        content: "What do you need designed?";
+      }
+
+      .search-box{
+        background-color: antiquewhite;
+        border: 1px solid gray;
+        width: 500px;
+
       }
     </style>
 </head>
@@ -27,14 +60,32 @@
             <div style="background-color: black; border: 1px solid black; width:50%; height: 10%;"></div>
             </button>
 
-            <a class="navbar-brand disabled ps-3 me-auto" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
-            <div class="me-auto my-2 my-2 my-lg-0 search-box">
-                <input type="text" id="mainInput">
-                <!-- <span class="fake-placeholder"></span> -->
-                <button class="search-btn p-2 rounded-circle">
-                <img src="images/search-icon.svg" alt="">
-                </button>
+            <a class="navbar-brand disabled ps-3" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
+            
+            <input type="radio" name="tab" id="shots" checked style="display: none;">
+            <input type="radio" name="tab" id="designers" style="display: none;">
+            <input type="radio" name="tab" id="services" style="display: none;">
+            
+            <div class="mx-3 position-relative d-flex align-items-center" style="max-width: 400px; min-width: 280px; flex-grow: 1;">
+                <div class="search-box w-100 d-flex justify-content-start" style="padding-left: 10px;">
+                    <input type="text" id="mainInput" style="padding-left: 15px;">
+                    <span class="fake-placeholder"></span>
+                    <div class="dropdown">
+                        <button class="btn btn-sm dropdown-toggle border-0 bg-transparent fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 14px; padding: 5px 10px;">
+                            <span id="selectedType">Shots</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><label for="shots" class="dropdown-item" style="cursor: pointer;">Shots</label></li>
+                            <li><label for="designers" class="dropdown-item" style="cursor: pointer;">Designers</label></li>
+                            <li><label for="services" class="dropdown-item" style="cursor: pointer;">Services</label></li>
+                        </ul>
+                    </div>
+                    <button class="search-btn p-2 rounded-circle">
+                        <img src="images/search-icon.svg" alt="">
+                    </button>
+                </div>
             </div>
+            
             <div class="collapse navbar-collapse" id="navbarScroll">
               <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
                   <li class="nav-item dropdown">
