@@ -12,86 +12,73 @@ body{
     content: url('images/prime--angle-down.svg');
 }
 
-@media (min-width:1024px) {
-        /* h3{
-          font-size: 28px !important;
-        }
+@media (min-width: 1024px) {
+    .w-lg-700 {
+        min-width: 700px !important;
+    }
 
-        h5{
-          font-size: medium;
-        } */
-
-        .w-lg-700{
-          min-width: 700px !important;
-        }
-
-        .w-lg-400{
-          min-width: 400px !important;
-        }
-      }
-
-      @media (max-width:1024px) {
-        .dropdown-menu{
-          box-shadow:none !important;
-        }
-      }
-
-.cursol{
-    cursor: pointer;
+    .w-lg-400 {
+        min-width: 400px !important;
+    }
 }
 
+@media (max-width: 1024px) {
+    .dropdown-menu {
+        box-shadow: none !important;
+    }
+}
+
+.cursol {
+    cursor: pointer;
+}
 
 .nav-item.dropdown a:hover .dropdown-menu {
     display: block;
 }
 
 .navbar .dropdown-menu {
-    margin-top: 0;  
+    margin-top: 0;
 }
 
-.btn-div{
+.btn-div {
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-.btn-div:hover{
+.btn-div:hover {
     background-color: #d7d7d7;
     color: black;
     border-radius: 20px;
 }
 
-
-.btn-signup{
+.btn-signup {
     color: #0D0C22;
     font-weight: bold;
 }
 
-.btn-signup:hover{
+.btn-signup:hover {
     color: #3D3D4E;
 }
 
-.btn-login{
+.btn-login {
     background-color: #0D0C22;
     font-weight: bold;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     border: none;
     outline: none;
 }
 
-
-.btn-login:hover{
+.btn-login:hover {
     background-color: #3D3D4E;
 }
 
-.hero-section{
+.hero-section {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
     padding: 80px 0;
 }
-
-
 
 .hero-left {
     padding-right: 40px;
@@ -104,22 +91,20 @@ body{
     margin-bottom: 20px;
 }
 
-    .hero-subtitle {
+.hero-subtitle {
     font-size: 1.1rem;
     color: #6c757d;
     margin-bottom: 40px;
 }
 
-/* Hide radio buttons */
 input[name="tab"] {
     display: none;
 }
 
-/* Tab styling */
-
-.tabs{
+.tabs {
     flex-wrap: wrap;
 }
+
 .tabs label {
     padding: 5px 8px;
     font-size: smaller;
@@ -127,19 +112,17 @@ input[name="tab"] {
     border: 1px solid #dcdcdc;
     cursor: pointer;
     transition: 0.3s;
-    
 }
 
-#shots:checked ~ .tabs label[for="shots"],
-#designers:checked ~ .tabs label[for="designers"],
-#services:checked ~ .tabs label[for="services"] {
+#shots:checked ~ .tabs #label-shots,
+#designers:checked ~ .tabs #label-designers,
+#services:checked ~ .tabs #label-services {
     background: white;
     color: black;
     border-color: white;
     filter: invert(1);
 }
 
-/* Search box */
 .search-box {
     position: relative;
     max-width: 650px;
@@ -153,21 +136,20 @@ input[name="tab"] {
     font-size: 15px;
 }
 
-/* Fake placeholder */
 .fake-placeholder {
     position: absolute;
     top: 14px;
     left: 18px;
     color: #888;
     pointer-events: none;
-    transition: .3s;
+    transition: 0.3s;
 }
 
-#mainInput:focus ~ .fake-placeholder{
+#mainInput:focus ~ .fake-placeholder {
     display: none;
 }
 
-#mainInput:blank ~ .fake-placeholder::after{
+#mainInput:blank ~ .fake-placeholder::after {
     display: block;
 }
 
@@ -187,17 +169,15 @@ input[name="tab"] {
     display: none;
     font-size: 14px;
     color: #666;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     flex-wrap: nowrap;
 }
 
-.sub span{
+.sub span {
     font-size: smaller !important;
     display: flex;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
 }
-
-
 
 #shots:checked ~ .subtexts .shots-sub {
     display: flex;
@@ -224,7 +204,6 @@ input[name="tab"] {
 
 .carousel-item {
     position: relative;
-
 }
 
 .video-controls {
@@ -241,13 +220,14 @@ input[name="tab"] {
     cursor: pointer;
 }
 
-.play-icon, .pause-icon {
+.play-icon,
+.pause-icon {
     width: 20px;
     height: 20px;
     filter: invert(0);
 }
 
-.video-controls:hover  .pause-icon{
+.video-controls:hover .pause-icon {
     content: url("images/play-icon.svg");
     transition: display 5s;
 }
@@ -316,8 +296,7 @@ input[name="tab"] {
 }
 
 .marquee-track{
-    /* animation-name: marquee; */
-animation: marquee 20s infinite linear;
+    animation: marquee 20s infinite linear;
 }
 
 @keyframes marquee {
@@ -335,10 +314,8 @@ animation: marquee 20s infinite linear;
 }
 
 .marquee-track .card{
-    /* height: ; */
     width: 200px !important;
     justify-items: center;
-    /* flex:?; */
     flex-shrink: 0;
     flex-grow: 0;
     z-index: 10;
@@ -348,8 +325,7 @@ animation: marquee 20s infinite linear;
 
 .marquee-track .card img{
     width: 100%;
-    flex: 0 0 7 ;
-    /* height: auto; */
+    flex: 0 0 7;
 }
 
 .marquee-track .card-body h5{
