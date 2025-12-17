@@ -23,53 +23,67 @@
             font-size: 11px;
         }
 
+        .main-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
     </style>
 </head>
 
-<body>
+<body class="">
 
     <div class="container-fluid w-100 h-100">
-        <div class="row w-100 h-100">
-            <div class="col-8 p-5 h-100 ">
+        <div class="row h-100">
+            <div class="col-12 col-lg-8 main-section">
                 <nav class="navbar sticky-top">
-                    <div class="m-3">
+                    <div class="m-lg-3">
                         <a href="index.html" class="navbar-brand">
-                            <img src="images/logo.svg" alt="" width="100px">
+                            <img src="images/logo.svg" alt="ball" width="100px">
                         </a>
                     </div>
                 </nav>
-                <main class="my-auto mx-auto" style="height: 400px; width: 600px;">
-                    <div class="mx-auto my-auto w-50 h-50 text-center ">
-                        <img class="mt-5 Ball rounded-circle" src="dribbleball-logo.svg" alt="" width="60px">
+                <main>
+                    <div class="mx-auto my-auto w-100 px-3" style="max-width: 400px;">
+                        <div class="text-center">
+                        <img class="mt-lg-5 mt-3 Ball rounded-circle" src="dribbleball-logo.svg" alt="" width="60px">
                         <h1 class="fs-2">Welcome Back</h1>
 
-                        <div class="rounded-pill d-flex border border-1 Py-4 px-2 w-100 mx-auto text-center"> <div class="mx-auto fw-bold p-2">Login with Google</div><img src="google.svg" alt="" width="16px" height="16px" class="my-auto"></div>
+                        <div class="rounded-pill d-flex border border-1 py-2 px-2 w-100 mx-auto text-center"> 
+                            <div class="mx-auto fw-bold p-lg-2 p-1">Login with Google</div>
+                            <img src="google.svg" alt="" width="16px" height="16px" class="my-auto">
+                        </div>
 
-                        <div class="my-3 mx-auto">or</div>
+                        <div class="my-lg-3 my-2 mx-auto">or</div>
                         <form action="" method="post">
                             <div class="mb-3">
-                                <input type="email"  class="form-control" name="" id="" placeholder="Email or Username" />
-                                <!-- <small id="emailHelpId" class="form-text text-muted">Help text</small> -->
+                                <input type="email" class="form-control" name="" id="" placeholder="Email or Username" />
                             </div>
 
-                            <button
-                                type="submit"
-                                class="btn btn-bluedark text-white rounded-pill w-100"
-                            >
+                            <button type="submit" class="btn btn-bluedark text-white rounded-pill w-100">
                                 Continue
                             </button>
-                            
                         </form>
                         <small class="fs-smaller w-100">
                             By continuing, you agree to our <a href="">Terms</a> and <a href="">Privacy Policy.</a> 
                         </small>
+                        <br>
                         <small>
                             Don't have an account? <a href="signup.html">Sign up</a>
                         </small>
                     </div>
+                    </div>
                 </main>
             </div>
-            <div class="col-4 h-100">
+            <div class="d-none d-lg-block col-4 h-100">
                 <video class="d-block h-100" muted autoplay loop>
                     <source src="videos/signin-signup video.mp4" type="video/mp4">
                 </video>
