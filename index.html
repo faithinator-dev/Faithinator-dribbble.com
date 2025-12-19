@@ -33,6 +33,12 @@ body{
     margin-top: 0;  
 }
 
+@media (max-width: 1024px) {
+    .dropdown-menu {
+        box-shadow: none !important;
+    }
+}
+
 .btn-div:hover{
     background-color: #d7d7d7;
     color: black;
@@ -537,215 +543,205 @@ footer {
         z-index: 1000;
     }
 }
-@media (min-width:1024px){
-    .hired-talent{
-        width: 700px !important;
-        min-width: 700px;
-    }
-}
-@media (max-width:1024px){
-    .hired-talent{
-        width: 700px !important;
-        min-width: 700px;
-    }
-}
     </style>
 </head>
 <body>
     <!-- my navbar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid mx-lg-5">
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between gap-2 px-4 py-3">
+        <div class="d-flex">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
             <div style="background-color: black; border: 1px solid black; width:100%; height: 10%;"></div>
             <div style="background-color: black; border: 1px solid black; width:80%; height: 10%;"></div>
             <div style="background-color: black; border: 1px solid black; width:50%; height: 10%;"></div>
             </button>
+            <a class="navbar-brand d-flex" href="index.html"><img src="images/logo.svg" alt="" width="100px"></a>
+        </div> 
+         <a href="login.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2 ms-auto d-lg-none" style="font-size: 12px;">Log in</a>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 pe-4">
+                   <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Explore
+                      </a>
+                      <ul class="dropdown-menu p-3">
+                          <li class="py-2"><a class="dropdown-item" href="#"><img src="images/scale-up.svg" alt="" loading="lazy" class="me-2">Popular</a></li>
+                          <li class="py-2"><a class="dropdown-item" href="#"><img src="images/design-geminilogo.svg" alt="" loading="lazy" class="me-2">New and Noteworthy</a></li>
+                          <li><hr class="dropdown-divider mx-auto " width="90%"></li>
+                          <li class="py-2"><a class="dropdown-item" href="#">Product Design</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Web Design</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Animation</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Branding</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Illustration</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Mobile</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Typography</a></li>
+                          <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
+                      </ul>
+                  </li>
+                </ul>
+                <!-- hire talent  -->
+                <ul class="hired-talent navbar-nav mb-2 mb-lg-0 pe-4">
+                     <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Hire Talent
+                      </a>
+                      <div class="dropdown-menu w-100 w-lg-700 p-4 border-0 rounded-4 mt-2">
+                          <div class="row g-4">
+                              <div class="col-12 col-lg-6 btn-div d-flex">
+                                  <div class="me-3 fs-3"><img src="images/gemini-menubook.svg" alt="" sizes="20px"></div>
+                                  <div>
+                                      <h6 class="fw-semibold mb-1">Start a Project Brief</h6>
+                                      <p class="small text-muted mb-0">Get instant talent recommendations</p>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-lg-6 btn-div d-flex">
+                                  <div class="me-3 fs-3"><img src="images/tag.svg" alt="" sizes="20px"></div>
+                                  <div>
+                                      <h6 class="fw-semibold mb-1">Explore Services</h6>
+                                      <p class="small text-muted mb-0">Hire quickly with pre-packaged services</p>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-lg-6 btn-div d-flex">
+                              <div class="me-3 fs-3"><img src="images/search-icon.svg" alt="" sizes="20px"></div>
+                                  <div>
+                                      <h6 class="fw-semibold mb-1">Browse Profiles</h6>
+                                      <p class="small text-muted mb-0">Find and message talent directly</p>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-lg-6 btn-div d-flex">
+                                  <div class="me-3 fs-3"><img src="images/pin.svg" alt="" sizes="20px"></div>
+                                  <div>
+                                      <h6 class="fw-semibold mb-1">Post a Full-Time Job</h6>
+                                      <p class="small text-muted mb-0">Reach designers looking for roles</p>
+                                  </div>
 
-            <a class="navbar-brand disabled ps-3 me-auto" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Explore
-                    </a>
-                    <ul class="dropdown-menu p-3">
-                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/scale-up.svg" alt="" loading="lazy" class="me-2">Popular</a></li>
-                        <li class="py-2"><a class="dropdown-item" href="#"><img src="images/design-geminilogo.svg" alt="" loading="lazy" class="me-2">New and Noteworthy</a></li>
-                        <li><hr class="dropdown-divider mx-auto " width="90%"></li>
-                        <li class="py-2"><a class="dropdown-item" href="#">Product Design</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Web Design</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Animation</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Branding</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Illustration</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Mobile</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Typography</a></li>
-                        <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
-                    </ul>
-                </li>
+                          </div>
+                          <hr class="my-3 mx-auto" width="90vw">
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Hire Talent
-                    </a>
-                    <div class="dropdown-menu w-100 w-lg-700 p-4 shadow-lg border-0 rounded-4 mt-2" style="border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
-                        <div class="row g-4">
-                            <div class="col-12 col-lg-6 btn-div d-flex">
-                                <div class="me-3 fs-3"><img src="images/gemini-menubook.svg" alt="" sizes="20px"></div>
-                                <div>
-                                    <h6 class="fw-semibold mb-1">Start a Project Brief</h6>
-                                    <p class="small text-muted mb-0">Get instant talent recommendations</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 btn-div d-flex">
-                                <div class="me-3 fs-3"><img src="images/tag.svg" alt="" sizes="20px"></div>
-                                <div>
-                                    <h6 class="fw-semibold mb-1">Explore Services</h6>
-                                    <p class="small text-muted mb-0">Hire quickly with pre-packaged services</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 btn-div d-flex">
-                            <div class="me-3 fs-3"><img src="images/search-icon.svg" alt="" sizes="20px"></div>
-                                <div>
-                                    <h6 class="fw-semibold mb-1">Browse Profiles</h6>
-                                    <p class="small text-muted mb-0">Find and message talent directly</p>
-                                </div>
-                            </div>
-                            <div class="col-12 col-lg-6 btn-div d-flex">
-                                <div class="me-3 fs-3"><img src="images/pin.svg" alt="" sizes="20px"></div>
-                                <div>
-                                    <h6 class="fw-semibold mb-1">Post a Full-Time Job</h6>
-                                    <p class="small text-muted mb-0">Reach designers looking for roles</p>
-                                </div>
-
-                        </div>
-                        <hr class="my-3 mx-auto" width="90vw">
-
-                                <div class="small fw-semibold text-black"> 
-                                    <img src="images/book.svg" alt="" sizes="12px">
-                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
-                                </div>
-                        </div>
-                </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Get Hired
-                </a>
-                <div class="dropdown-menu p-4 w-100 w-lg-700 border-0 rounded-4 mt-2" style=" box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
-                    <div class="row g-4">
-                        <div class="col-12 col-lg-6 d-flex btn-div">
-                            <div class="me-3 fs-3"><img src="images/menubook.svg" alt="" sizes="20px"></div>
-                            <div>
-                                <h6 class="fw-semibold mb-1">Project Brief</h6>
-                                <p class="small text-muted mb-0">Browse open client project briefs</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 d-none d-lg-flex" style="cursor: pointer;">
-                            <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
-                        </div>
-                        <!-- second line -->
-                         <div class="col-12 col-lg-6 d-flex btn-div">
-                            <div class="me-3 fs-3"><img src="images/save-plus.svg" alt="" sizes="20px"></div>
-                            <div>
-                                <h6 class="fw-semibold mb-1">Add a Service</h6>
-                                <p class="small text-muted mb-0">Let clients purchase your services</p>
-                            </div>
-                        </div>
-                        <div class="col-6 d-none d-lg-flex">
-                        </div>
-
-                        <div class="col-12 col-lg-6 d-flex btn-div">
-                            <div class="me-3 fs-3"><img src="images/bag.svg" alt="" sizes="20px"></div>
-                            <div>
-                                <h6 class="fw-semibold mb-1">Full-Time Jobs</h6>
-                                <p class="small text-muted mb-0">
-                                Apply to full-time design roles
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-6 d-none d-lg-flex">
-                        </div>
-                        <div class="col-lg-12 d-flex d-lg-none" style="cursor: pointer;">
-                            <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
-                        </div>
-                        
-
-                    
-                        <hr class="my-3">
-
-                                <div class="small fw-semibold text-black"> 
-                                    <img src="images/book.svg" alt="" sizes="12px">
-                                    Learn more about hiring work on dribbble <img src="images/" sizes="16px">
-                                </div>
-                        </div>
-                </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Community
-                </a>
+                                  <div class="small fw-semibold text-black"> 
+                                      <img src="images/book.svg" alt="" sizes="12px">
+                                      Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                  </div>
+                          </div>
+                  </div>
+                  </li>
+                </ul>
                 
-                <div class="dropdown-menu w-100 w-lg-400 p-4 shadow-lg border-0 rounded-4 mt-2" style="border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
-                    <div class="row g-4">
-                        <div class="col-12 d-flex btn-div btn">
-                            <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
-                            <a href="blog.html" class="text-black text-start btn">
-                                <h6 class="fw-semibold mb-1">Blog</h6>
-                                <p class="small text-muted mb-0">Design inspiration, stories, and tips</p>
-                            </a>
+                <!-- get hired  -->
+                 <ul class=" navbar-nav mb-2 mb-lg-0 pe-4">
+                     <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Get Hired
+                  </a>
+                  <div class="dropdown-menu p-4 w-100 w-lg-700 border-0 rounded-4 mt-2">
+                      <div class="row g-4">
+                          <div class="col-12 col-lg-6 d-flex btn-div">
+                              <div class="me-3 fs-3"><img src="images/menubook.svg" alt="" sizes="20px"></div>
+                              <div>
+                                  <h6 class="fw-semibold mb-1">Project Brief</h6>
+                                  <p class="small text-muted mb-0">Browse open client project briefs</p>
+                              </div>
+                          </div>
+                          <div class="col-lg-6 d-none d-lg-flex" style="cursor: pointer;">
+                              <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
+                          </div>
+                          <!-- second line -->
+                          <div class="col-12 col-lg-6 d-flex btn-div">
+                              <div class="me-3 fs-3"><img src="images/save-plus.svg" alt="" sizes="20px"></div>
+                              <div>
+                                  <h6 class="fw-semibold mb-1">Add a Service</h6>
+                                  <p class="small text-muted mb-0">Let clients purchase your services</p>
+                              </div>
+                          </div>
+                          <div class="col-6 d-none d-lg-flex">
+                          </div>
+
+                          <div class="col-12 col-lg-6 d-flex btn-div">
+                              <div class="me-3 fs-3"><img src="images/bag.svg" alt="" sizes="20px"></div>
+                              <div>
+                                  <h6 class="fw-semibold mb-1">Full-Time Jobs</h6>
+                                  <p class="small text-muted mb-0">
+                                  Apply to full-time design roles
+                                  </p>
+                              </div>
+                          </div>
+                          <div class="col-6 d-none d-lg-flex">
+                          </div>
+                          <div class="col-lg-12 d-flex d-lg-none" style="cursor: pointer;">
+                              <span class="">Upgrade to Pro → <br> Advertise with Us →</span>
+                          </div>
+                          
+
+                      
+                          <hr class="my-3">
+
+                                  <div class="small fw-semibold text-black"> 
+                                      <img src="images/book.svg" alt="" sizes="12px">
+                                      Learn more about hiring work on dribbble <img src="images/" sizes="16px">
+                                  </div>
+                          </div>
+                  </div>
+                  </li>
+                </ul>
+                 
+                <!-- community  -->
+                 <ul class="community navbar-nav mb-2 mb-lg-0 pe-4">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Community
+                    </a>
+                  
+                    <div class=" dropdown-menu w-100 w-lg-400 p-4 border-0 rounded-4 mt-2">
+                        <div class="row g-4">
+                            <div class="col-12 d-flex btn-div btn">
+                                <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
+                                <a href="blog.html" class="text-black text-start btn">
+                                    <h6 class="fw-semibold mb-1">Blog</h6>
+                                    <p class="small text-muted mb-0">Design inspiration, stories, and tips</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-12 d-flex btn-div btn text-start">
+                                <div class="me-3 fs-3"><img src="images/cup-achieve.svg" alt="" sizes="20px"></div>
+                                <a href="#" class="text-black text-start btn">
+                                    <h6 class="fw-semibold mb-1">Playoffs</h6>
+                                    <p class="small text-muted mb-0">Join creative challenges and show your skills</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-12 d-flex  btn-div btn">
+                                <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
+                                <a href="blog.html" class="text-black text-start btn">
+                                    <h6 class="fw-semibold mb-1">Help Center</h6>
+                                    <p class="small text-muted mb-0">Get quick answers and learn how to use Dribbble</p>
+                                </a>
+                            </div>
+
+                            <hr class="my-3">
+
+                                    <div class="small fw-semibold text-black"> 
+                                      <span>Follow Us </span><img src="images/instagram.svg" width="20px" class="mx-2 cursol"> <img src="images/x-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/pinterest.svg" width="20px" class="mx-2 cursol"> <img src="images/youtube-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/tiktok.svg" alt="" width="20px" class="mx-2 cursol"> <img src="images/trend-icon.svg" alt="" width="20px" class="mx-2 cursol">
+                                    </div>
                         </div>
                     </div>
-
-                    <div class="row g-4">
-                        <div class="col-12 d-flex btn-div btn text-start">
-                            <div class="me-3 fs-3"><img src="images/cup-achieve.svg" alt="" sizes="20px"></div>
-                            <a href="#" class="text-black text-start btn">
-                                <h6 class="fw-semibold mb-1">Playoffs</h6>
-                                <p class="small text-muted mb-0">Join creative challenges and show your skills</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="row g-4">
-                        <div class="col-12 d-flex btn-div btn">
-                            <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
-                            <a href="blog.html" class="text-black text-start btn">
-                                <h6 class="fw-semibold mb-1">Help Center</h6>
-                                <p class="small text-muted mb-0">Get quick answers and learn how to use Dribbble</p>
-                            </a>
-                        </div>
-
-                        <hr class="my-3">
-
-                                <div class="small fw-semibold text-black"> 
-                                   <span>Follow Us </span><img src="images/instagram.svg" width="20px" class="mx-2 cursol"> <img src="images/x-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/pinterest.svg" width="20px" class="mx-2 cursol"> <img src="images/youtube-logo.svg" width="20px" class="mx-2 cursol"> <img src="images/tiktok.svg" alt="" width="20px" class="mx-2 cursol"> <img src="images/trend-icon.svg" alt="" width="20px" class="mx-2 cursol">
-                                </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-                </li>
-            </ul>
-
-
-            <div class="d-flex ms-auto align-items-center gap-3 mt-3 mt-lg-0">
-                <a href="signup.html" class="btn-signup px-3 py-2 text-decoration-none d-none d-md-block rounded-pill">Sign&nbsp;up</a>
-                <a href="signin.html" class="btn-login text-light px-3 py-2 text-decoration-none rounded-pill">Log&nbsp;in</a>
-             </div>
+                  </li>
+                </ul>
+                <ul class="navbar-nav my-3 mb-lg-0 pe-4 d-lg-none ">
+                    <li style="font-size: 16px; font-weight: 600; color: #EA4C89;">Start Project Brief</li>
+                </ul>
+            <div class="d-flex ms-auto d-none d-lg-flex">
+                <a class="btn fw-bold" style="color: black; font-size: small; btn:hover{color: #3D3D4E;}" type="submit" href="signup.html">Sign up</a>
+                <a href="login.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2" style="font-size: 12px;">Log in</a>
             </div>
-            
-            
-            
         </div>
-    </nav>
+       
+</nav>
 
 
-        <section class="hero-section container-fluid mb-4">
+    <section class="hero-section container-fluid mb-4">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7 hero-left">
@@ -1000,7 +996,7 @@ footer {
         </div>
     </section>
 
-<section class="filter-nav py-3 bg-white border-bottom sticky-filter container-fluid">
+    <section class="filter-nav py-3 bg-white border-bottom sticky-filter container-fluid">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex gap-3 align-items-center w-100">
@@ -1051,7 +1047,6 @@ footer {
     </section>
 
     <input type="radio" name="cancel" id="cancel" class="d-none">
-
     <section class="promo-banner">
         <div class="w-100 py-3 text-white position-relative">
             <div class="container ">

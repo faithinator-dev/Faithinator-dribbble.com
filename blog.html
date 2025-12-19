@@ -9,86 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-
-      @media (max-width:769px) {
-        h3{
-          font-size: 28px !important;
+        @media (max-width:769px) {
+            h3{
+                font-size: 28px !important;
+            }
         }
-      }
-
-      /* Navbar search placeholder styling */
-      .navbar .fake-placeholder {
-        position: absolute;
-        top: 14px;
-        left: 30px;
-        color: #888;
-        transition: .3s;
-        font-size: 14px;
-      }
-
-      .navbar #mainInput:focus ~ .fake-placeholder {
-        display: none;
-      }
-
-      .navbar .fake-placeholder::after {
-        content: "What type of design are you interested in?";
-      }
-
-      #designers:checked ~ div .search-box .fake-placeholder::after {
-        content: "What type of designer do you need?";
-      }
-
-      #services:checked ~ div .search-box .fake-placeholder::after {
-        content: "What do you need designed?";
-      }
-
-      .search-box{
-        background-color: antiquewhite;
-        border: 1px solid gray;
-        width: 500px;
-
-      }
     </style>
 </head>
 <body>
     <!-- my navbar-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-        <div class="container-fluid mx-lg-5">
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
+  <nav class="navbar navbar-expand-lg d-flex justify-content-between gap-2 px-4 py-3">
+        <div class="d-flex">
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
             <div style="background-color: black; border: 1px solid black; width:100%; height: 10%;"></div>
             <div style="background-color: black; border: 1px solid black; width:80%; height: 10%;"></div>
             <div style="background-color: black; border: 1px solid black; width:50%; height: 10%;"></div>
             </button>
-
-            <a class="navbar-brand disabled ps-3" href="index.html"><img src="images/logo.svg" width="100px" alt="Dribbble"></a>
-            
-            <input type="radio" name="tab" id="shots" checked style="display: none;">
-            <input type="radio" name="tab" id="designers" style="display: none;">
-            <input type="radio" name="tab" id="services" style="display: none;">
-            
-            <div class="mx-3 position-relative d-flex align-items-center" style="max-width: 400px; min-width: 280px; flex-grow: 1;">
-                <div class="search-box w-100 d-flex justify-content-start" style="padding-left: 10px;">
-                    <input type="text" id="mainInput" style="padding-left: 15px;">
-                    <span class="fake-placeholder"></span>
-                    <div class="dropdown">
-                        <button class="btn btn-sm dropdown-toggle border-0 bg-transparent fw-semibold" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 14px; padding: 5px 10px;">
-                            <span id="selectedType">Shots</span>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><label for="shots" class="dropdown-item" style="cursor: pointer;">Shots</label></li>
-                            <li><label for="designers" class="dropdown-item" style="cursor: pointer;">Designers</label></li>
-                            <li><label for="services" class="dropdown-item" style="cursor: pointer;">Services</label></li>
-                        </ul>
-                    </div>
-                    <button class="search-btn p-2 rounded-circle">
-                        <img src="images/search-icon.svg" alt="">
-                    </button>
-                </div>
-            </div>
-            
-            <div class="collapse navbar-collapse" id="navbarScroll">
-              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
-                  <li class="nav-item dropdown">
+            <a class="navbar-brand d-flex" href="index.html"><img src="images/logo.svg" alt="" width="100px"></a>
+        </div> 
+        <a href="signin.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2 ms-auto d-lg-none" style="font-size: 12px;">Log in</a>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 pe-4">
+                   <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Explore
                       </a>
@@ -106,8 +48,10 @@
                           <li class="py-2"><a href="" class="dropdown-item">Paint</a></li>
                       </ul>
                   </li>
-
-                  <li class="nav-item dropdown">
+                </ul>
+                <!-- hire talent  -->
+                <ul class="hired-talent navbar-nav mb-2 mb-lg-0 pe-4">
+                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Hire Talent
                       </a>
@@ -151,8 +95,10 @@
                           </div>
                   </div>
                   </li>
-
-                  <li class="nav-item dropdown">
+                </ul>
+                <!-- get hired  -->
+                 <ul class=" navbar-nav mb-2 mb-lg-0 pe-4">
+                     <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Get Hired
                   </a>
@@ -205,13 +151,16 @@
                           </div>
                   </div>
                   </li>
-
-                  <li class="nav-item dropdown">
+                </ul>
+                 
+                <!-- community  -->
+                 <ul class="community navbar-nav mb-2 mb-lg-0 pe-4">
+                    <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Community
                     </a>
                   
-                    <div class="dropdown-menu w-100 w-lg-400 p-4 shadow-lg border-0 rounded-4 mt-2" style="border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
+                    <div class=" dropdown-menu w-100 w-lg-400 p-4 shadow-lg border-0 rounded-4 mt-2" style="border-radius: 16px !important;box-shadow: 0 10px 40px rgba(0,0,0,0.10) !important;">
                         <div class="row g-4">
                             <div class="col-12 d-flex btn-div btn">
                                 <div class="me-3 fs-3"><img src="images/layout-svg.svg" alt="" sizes="20px"></div>
@@ -233,7 +182,7 @@
                         </div>
 
                         <div class="row g-4">
-                            <div class="col-12 d-flex btn-div btn">
+                            <div class="col-12 d-flex  btn-div btn">
                                 <div class="me-3 fs-3"><img src="images/question-help.svg" alt="" sizes="20px"></div>
                                 <a href="blog.html" class="text-black text-start btn">
                                     <h6 class="fw-semibold mb-1">Help Center</h6>
@@ -249,20 +198,17 @@
                         </div>
                     </div>
                   </li>
-              </ul>
+                </ul>
+                <ul class="navbar-nav my-3 mb-lg-0 pe-4 d-lg-none ">
+                    <li style="font-size: 16px; font-weight: 600; color: #EA4C89;">Start Project Brief</li>
+                </ul>
+            <div class="d-flex ms-auto d-none d-lg-flex">
+                <a class="btn fw-bold" style="color: black; font-size: small; btn:hover{color: #3D3D4E;}" type="submit" href="signup.html">Sign up</a>
+                <a href="login.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2" style="font-size: 12px;">Log in</a>
             </div>
-
-
-            <div class="d-flex ms-auto align-items-center gap-3 mt-3 mt-lg-0">
-                <a href="signup.html" class="btn-signup px-3 py-2 text-decoration-none d-none d-md-block rounded-pill">Sign&nbsp;up</a>
-                <a href="signin.html" class="btn-login text-light px-3 py-2 text-decoration-none rounded-pill">Log&nbsp;in</a>
-             </div>
-            </div>
-            
-            
-            
         </div>
-    </nav>
+       
+</nav>
 
     <main class=" container-fluid container-lg">
       <div class="row mt-5 pt-5">
