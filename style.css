@@ -124,7 +124,6 @@ input[name="tab"] {
 }
 
 .search-box {
-    position: relative;
     max-width: 650px;
 }
 
@@ -562,5 +561,9 @@ footer {
                 padding: 20px;
                 border-bottom: 1px solid #ddd;
                 z-index: 1000;
+            }
+
+            .search-box{
+                width: 100% !important;
             }
         }
