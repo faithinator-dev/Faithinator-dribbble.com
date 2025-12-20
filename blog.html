@@ -18,6 +18,7 @@
 </head>
 <body>
     <!-- my navbar-->
+<header>
    <nav class="navbar navbar-expand-lg d-flex justify-content-between gap-2 px-4 py-3">
         <div class="d-flex">
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 3rem; height: 3rem;">
@@ -29,7 +30,7 @@
         </div> 
          <a href="login.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2 ms-auto d-lg-none" style="font-size: 12px;">Log in</a>
             <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                <div class="rounded-pill overflow-hidden position-relative d-none d-md-flex justify-content-between align-items-center" style=" width: 40%; background-color: #F8F8FC; padding: 10px;">
+                <div class="rounded-pill overflow-hidden w-100 w-md-40 position-relative  d-flex justify-content-between align-items-center" style="  background-color: #F8F8FC; padding: 10px;">
                      <input class="" id="mainInput" type="text" placeholder="" style="background: none; border: none; outline: none; width: 76%; font-size: 13px; padding: 5px 18px;">
                      <div class="position-absolute fake-placeholder"  style="left: 10%; top: 25%; text-align: start; width: 70%; line-height: 27px;"></div>
                      <div class="d-none d-lg-flex bg-light" style="z-index: 2;">
@@ -223,12 +224,35 @@
                     <li style="font-size: 16px; font-weight: 600; color: #EA4C89;">Start Project Brief</li>
                 </ul>
             <div class="d-flex ms-auto d-none d-lg-flex">
-                <a class="btn fw-bold" style="color: black; font-size: small; btn:hover{color: #3D3D4E;}" type="submit" href="signup.html">Sign up</a>
-                <a href="login.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2" style="font-size: 12px;">Log in</a>
+                <a class="btn fw-bold" style="color: black; font-size: small; btn:hover{color: #3D3D4E;}" type="submit" href="signup.html">Sign&nbsp;up</a>
+                <a href="login.html" class="btn btn-dark fw-bold rounded-pill text-light px-3 py-2" style="font-size: 12px;">Log&nbsp;in</a>
             </div>
         </div>
        
-</nav>
+  </nav>
+                    <input type="radio" name="tab" id="shots" checked>
+                    <input type="radio" name="tab" id="designers">
+                    <input type="radio" name="tab" id="services">
+              <div class="rounded-pill overflow-hidden position-relative d-flex d-md-none justify-content-between align-items-center" style=" width: 100%; background-color: #F8F8FC; padding: 10px;">
+                     <input class="" id="mainInput" type="text" placeholder="" style="background: none; border: none; outline: none; width: 76%; font-size: 13px; padding: 5px 18px;">
+                     <div class="position-absolute fake-placeholder"  style="left: 10%; top: 25%; text-align: start; width: 70%; line-height: 27px;"></div>
+                     <div class="d-none d-lg-flex bg-light" style="z-index: 2;">
+                        <select class="bg-light rounded pill mx-1" name="tab" id="tabs">
+                          <option value="shots" >
+                            <label for="shots">shots</label>
+                          </option>
+                          <option value="designers">
+                            <label for="designers">designers</label>
+                          </option>
+                          <option value="services">
+                            <label for="services">services</label>
+                          </option>
+                        </select>
+                        <img src="icons/iconamoon--arrow-down-2-light (2).svg" alt="">
+                     </div>
+                    <div class="rounded-circle d-flex align-items-center justify-content-center" style="width: 30px; height: 30px; z-index: 2; background-color: #EC5E95;"><img src="images/search-icon.svg" alt="" style="filter: invert(1);"></div>
+                </div>
+</header>
 
     <main class=" container-fluid container-lg">
       <div class="row mt-5 pt-5">
